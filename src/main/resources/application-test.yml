@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    initialization-mode: always
+    password: password
+    platform: h2-test
+    url: jdbc:h2:file:~/clients-test
+    username: sa
+  h2:
+    console:
+      enabled: true
+      path: /h2_console
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+currency-service:
+  foreign-currency: USD
+  nbp:
+    url: http://api.nbp.pl/api/exchangerates/rates/A/
+    retry:
+      delay: 3000
+      max-attempts: 2
